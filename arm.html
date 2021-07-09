@@ -1,0 +1,295 @@
+
+<?php require 'index.php'?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 25%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 4px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 25%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 25%;
+  background: #A52A2A;
+  cursor: pointer;
+  button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+ button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+</style>
+</head>
+
+
+<body>
+
+<h1>control panel</h1>
+
+<form action="index.php" method="post">
+
+  
+<p>motor1:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="180" value="40" class="slider1" id="myRange1"range="true" name="motor1">
+  <p>Value: <span id="demo1" class="range-value">40</span></p>
+</div>
+
+
+<p>motor2:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="180" value="50" class="slider2" id="myRange2"range="true" name="motor2">
+  <p>Value: <span id="demo2" class="range-value">50</span></p>
+</div>
+
+
+<p>motor3:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="180" value="30" class="slider3" id="myRange3"range="true" name="motor3">
+  <p>Value: <span id="demo3"  class="range-value">30</span></p>
+</div>
+
+
+<p>motor4:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="180" value="120" class="slider4" id="myRange4"range="true" name="motor4">
+  <p>Value: <span id="demo4" class="range-value">120</span></p>
+</div>
+
+
+<p>motor5:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="180" value="140" class="slider5" id="myRange5"range="true" name="motor5">
+  <p>Value: <span id="demo5" class="range-value">140</span></p>
+</div>
+
+
+<p>motor6:</p>
+<div class="slidecontainer">
+  <input type="range" min="0" max="180" value="150" class="slider6" id="myRange6" range="true" name="motor6">
+  <p>Value: <span id="demo6" class="range-value">150</span></p>
+</div>
+
+
+
+  <input type="submit" class="btn btn-primary" name="submit" value="save"> </input>
+  <button type="submit" id="run" onclick="alert("run of the motor")">run</button>
+
+
+  </form>
+  
+
+
+
+
+
+
+<script>
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+</script>
+<script>
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+</script>
+<script>
+var slider3 = document.getElementById("myRange3");
+var output3 = document.getElementById("demo3");
+output3.innerHTML = slider3.value;
+slider3.oninput = function() {
+  output3.innerHTML = this.value;
+}
+</script>
+<script>
+var slider4 = document.getElementById("myRange4");
+var output4 = document.getElementById("demo4");
+output4.innerHTML = slider4.value;
+slider4.oninput = function() {
+  output4.innerHTML = this.value;
+}
+</script>
+<script>
+var slider5 = document.getElementById("myRange5");
+var output5 = document.getElementById("demo5");
+output5.innerHTML = slider5.value;
+slider5.oninput = function() {
+  output5.innerHTML = this.value;
+}
+</script>
+<script>
+var slider6 = document.getElementById("myRange6");
+var output6 = document.getElementById("demo6");
+output6.innerHTML = slider6.value;
+slider6.oninput = function() {
+  output6.innerHTML = this.value;
+}
+</script>
+<br>
+<br><hr>
+
+<script>
+  /*
+function myFunction() {
+  document.getElementById("save").innerHTML ="the information is saved";
+}
+</script>
+<script>
+function myFunction() {
+  document.getElementById("run").innerHTML ="run of the motor";
+}+
+*/
+</script>
+</body>
+</html>
+<?php require 'index1.php'?>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<h1>control base</h1>
+<form action="index1.php"method="post">
+<center>
+  <tr>
+    <th>  </th>
+    <th>  </th> 
+    <th>  </th>
+    </tr>
+       <tr><td></td>
+<td><input type="submit"  name="forward" value = "forward" id="v1" class="button button2" onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #F0F8FF; /* AliceBlue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style>
+</td>
+       </tr>
+  <td>   </td>
+        </tr> </div>
+        <br>
+      <tr>
+<td><input type="submit" name="left" value="left"id="v2" class="button button2" onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<td><input type="submit"  name ="stop"value =" stop" id="v3"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<td><input type="submit" name="right" value= "right"id="v4"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+</tr>  </div>
+        <br>
+        <tr>
+        <td></td>
+<td><input type="submit"  name ="backward"value= "backward"id="v5"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<input type="hidden" name="selected" value =""id ="v">
+  </td>
+       </tr>
+	   </center>
+  </form>
+	<br>
+<br><hr>
+</body>
+</html>
+<script>
+function dir_insert(selected){
+document.getElementById("v").value = selected;
+}
+</script>
