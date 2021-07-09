@@ -1,0 +1,87 @@
+
+<?php require 'index1.php'?>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<h1>control base</h1>
+<form action="index1.php"method="post">
+<center>
+  <tr>
+    <th>  </th>
+    <th>  </th> 
+    <th>  </th>
+    </tr>
+       <tr><td></td>
+<td><input type="submit"  name="forward" value = "forward" id="v1" class="button button2" onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #F0F8FF; /* AliceBlue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style>
+</td>
+       </tr>
+  <td>   </td>
+        </tr> </div>
+        <br>
+      <tr>
+<td><input type="submit" name="left" value="left"id="v2" class="button button2" onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<td><input type="submit"  name ="stop"value =" stop" id="v3"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<td><input type="submit" name="right" value= "right"id="v4"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+</tr>  </div>
+        <br>
+        <tr>
+        <td></td>
+<td><input type="submit"  name ="backward"value= "backward"id="v5"class="button button2"onclick ="dir_insert(this.name)"><style>.button {
+  background-color: #000000; /* Black */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;</style></td>
+<input type="hidden" name="selected" value =""id ="v">
+  </td>
+       </tr>
+	   </center>
+  </form>
+	<br>
+<br><hr>
+</body>
+</html>
+<script>
+function dir_insert(selected){
+document.getElementById("v").value = selected;
+}
+</script>
